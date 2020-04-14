@@ -59,10 +59,16 @@ public class UI {
         System.out.println();
         System.out.println("Turn: " + chessMatch.getTurn());
         //System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+        System.out.print("Waiting player: ");
         if(chessMatch.getCurrentPlayer() == Color.WHITE)
-            System.out.println("Waiting player: "+ ANSI_WHITE +"Weiss"+ ANSI_RESET);
+            System.out.print(ANSI_WHITE +"Weiss");
         else
-            System.out.println("Waiting player: "+ ANSI_YELLOW +"Yang"+ ANSI_RESET);
+            System.out.print(ANSI_YELLOW +"Yang");
+        System.out.println(ANSI_RESET);
+
+        if(chessMatch.getCheck()){
+            System.out.println("CHECK!");
+        }
 
     }
 
@@ -112,13 +118,11 @@ public class UI {
         System.out.println("Captured pieces: ");
         System.out.print(ANSI_WHITE);
         System.out.print("Weiss: ");
-        System.out.print(ANSI_YELLOW);
         System.out.println(Arrays.toString(white.toArray()));
         System.out.print(ANSI_RESET);
 
         System.out.print(ANSI_YELLOW);
         System.out.print("Yang: ");
-        System.out.print(ANSI_WHITE);
         System.out.println(Arrays.toString(black.toArray()));
         System.out.print(ANSI_RESET);
     }
