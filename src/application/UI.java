@@ -124,12 +124,14 @@ public class UI {
         System.out.println("Captured pieces: ");
         System.out.print(ANSI_WHITE);
         System.out.print("Weiss: ");
-        System.out.println(Arrays.toString(white.toArray()));
+        System.out.print(ANSI_YELLOW);
+        System.out.println(Arrays.toString(black.toArray()));
         System.out.print(ANSI_RESET);
 
         System.out.print(ANSI_YELLOW);
         System.out.print("Yang: ");
-        System.out.println(Arrays.toString(black.toArray()));
+        System.out.print(ANSI_WHITE);
+        System.out.println(Arrays.toString(white.toArray()));
         System.out.print(ANSI_RESET);
     }
 }
